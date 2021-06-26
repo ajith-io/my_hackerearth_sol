@@ -1,0 +1,39 @@
+/*
+// Sample code to perform I/O:
+#include <stdio.h>
+
+int main(){
+	int num;
+	scanf("%d", &num);              			// Reading input from STDIN
+	printf("Input number is %d.\n", num);       // Writing output to STDOUT
+}
+
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+*/
+
+// Write your code here
+main(){
+	int N, L,W,H;
+	scanf("%d",&L);
+	scanf("%d",&N);
+	for(int i=1; i<=N; i++){
+		scanf("%d",&W);
+		scanf("%d",&H);
+
+
+		if (W==L && H==L){
+			printf("ACCEPTED\n");
+		}
+		else if (W==H && W>L){
+			printf("ACCEPTED\n");
+		}
+		else if(W<L || H<L){
+			printf("UPLOAD ANOTHER\n");
+
+		}
+		else{
+			printf("CROP IT\n");
+		}
+	}
+
+}
